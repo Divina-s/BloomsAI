@@ -1,0 +1,26 @@
+# BloomsSoftware/.gitignore
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore the backend SQLite database
+backend/db.sqlite3
+
+# Ignore compiled Python bytecode
+*.pyc
+backend/backend/__pycache__
+backend/blooms_app/__pycache__
+
+
+# Ignore the frontend build directory (if applicable)
+frontend/build/
+
+# Ignore development and IDE-specific files
+.vscode/
+.idea/
+*.pydevproject
+*.pyc
+
+# Ignore local settings file (if applicable)
+backend/backend/settings_local.py
+
