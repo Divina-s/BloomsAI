@@ -13,6 +13,9 @@ import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
+import 'package:page_transition/page_transition.dart';
+
+import '../bottom_nav/bottom_navbar.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -82,7 +85,14 @@ class _LoginViewState extends State<LoginView> {
           ),
           SizedBox(height: 4.h),
           CustomButton(
-            onTap: () {},
+            onTap: () {
+                Navigator.pushAndRemoveUntil(
+              context,
+              PageTransition(
+                  child: const BottomNavbar(),
+                  type: PageTransitionType.fade),
+              (route) => true);
+            },
             buttonText: 'Sign In',
             status: false,
           ),
