@@ -1,2 +1,4 @@
 
-class APIs{}
+class APIs{
+    static const chatApiKey = "";
+}

@@ -25,3 +25,11 @@ static void snackErrorMessage({required String message,required BuildContext con
   ));
 }
 }
+
+class AppStrings{
+  static const String chatHistoryBox = 'chat_history';
+  static const String userBox = 'user_box';
+  static const String settingsBox = 'settings';
+  static const String bloomsaiDB = 'bloomsai.db';
+  static const String chatMessagesBox = 'chat_messages_';
+}
