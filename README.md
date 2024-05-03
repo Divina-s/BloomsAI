@@ -25,9 +25,9 @@ git clone [https://github.com/Divina-s/BloomsAI]
   ```
 - Run the Project:
   - To run the Flutter project, use the flutter run command:
-    `
-     flutter run
-
+  ```
+  flutter run
+  ```
 3. **Backend Setup:**
 - Navigate to the `backend` directory.
 - Open the `requirement.txt` file and start setting up your environment
