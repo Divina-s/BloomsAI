@@ -69,7 +69,7 @@ Contributions to the project are welcome! Here's how you can contribute:
 ## Links of the Contributors
 - [Divina Mbel](https://github.com/Divina-s)
 - [Mahagueheme G. Roxanne](https://github.com/mahagueheme-Lesly)
-- [Contributor 3](link-to-github-profile)
+- [Nyony Godwill](https://github.com/godsakani)
 - [Contributor 3](link-to-github-profile)
 - [Contributor 3](link-to-github-profile)
 
