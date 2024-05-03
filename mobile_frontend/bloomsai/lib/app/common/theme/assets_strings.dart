@@ -24,7 +24,11 @@ class ImageAssets {
   static String rate = "$IMAGE_ASSETS/images/rate.svg";
   static String rate_us = "$IMAGE_ASSETS/images/rate_us.svg";
   static String select = "$IMAGE_ASSETS/images/select.svg";
+  static String solution = "$IMAGE_ASSETS/images/solution.svg";
   static String tomato = "$IMAGE_ASSETS/images/tomato.png";
   static String upload = "$IMAGE_ASSETS/images/upload.svg";
   static String yams = "$IMAGE_ASSETS/images/yams.png";
+  static String uploadIcon = "$IMAGE_ASSETS/images/upload_icon.png";
+  static String audio = "$IMAGE_ASSETS/images/audio.svg";
+  static String tomatos = "$IMAGE_ASSETS/images/tommatoo.png";
 }

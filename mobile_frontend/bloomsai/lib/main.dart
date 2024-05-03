@@ -1,5 +1,6 @@
 import 'package:bloomsai/app/controller/provider/auth/auth_provider.dart';
 import 'package:bloomsai/app/controller/provider/chat/settings_provider.dart';
+import 'package:bloomsai/app/controller/provider/diagnose/diagnose_provider.dart';
 import 'package:bloomsai/app/controller/provider/profile/profile_provider.dart';
 import 'package:bloomsai/app/views/splash/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +40,9 @@ class MyApp extends StatelessWidget {
           ),
           ChangeNotifierProvider<ProfileProvider>(
             create: (_) => ProfileProvider(),
+          ),
+          ChangeNotifierProvider<DiagnoseProvider>(
+            create: (_) => DiagnoseProvider(),
           ),
         ],
         child: const GetMaterialApp(
