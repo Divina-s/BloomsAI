@@ -2,9 +2,11 @@ import 'package:bloomsai/app/common/theme/app_colors.dart';
 import 'package:bloomsai/app/common/theme/assets_strings.dart';
 import 'package:bloomsai/app/common/theme/text_style.dart';
 import 'package:bloomsai/app/common/utils/navigator.dart';
-import 'package:bloomsai/app/common/widget/custom_button.dart';
-import 'package:bloomsai/app/common/widget/custome_textfield.dart';
-import 'package:bloomsai/app/common/widget/profile_card.dart';
+
+import 'package:bloomsai/app/common/widget/others/custom_button.dart';
+import 'package:bloomsai/app/common/widget/others/custome_textfield.dart';
+import 'package:bloomsai/app/common/widget/others/profile_card.dart';
+
 import 'package:bloomsai/app/controller/provider/profile/profile_provider.dart';
 import 'package:bloomsai/app/views/profile/language_view.dart';
 import 'package:bloomsai/app/views/profile/update_view.dart';

@@ -1,7 +1,7 @@
 import 'package:bloomsai/app/common/theme/text_style.dart';
-import 'package:bloomsai/app/common/widget/custom_button.dart';
-import 'package:bloomsai/app/common/widget/custome_textfield.dart';
-import 'package:bloomsai/app/common/widget/divider.dart';
+import 'package:bloomsai/app/common/widget/others/custom_button.dart';
+import 'package:bloomsai/app/common/widget/others/custome_textfield.dart';
+import 'package:bloomsai/app/common/widget/others/divider.dart';
 import 'package:bloomsai/app/controller/provider/auth/auth_provider.dart';
 import 'package:bloomsai/app/views/auth/otp_view.dart';
 import 'package:flutter/material.dart';
