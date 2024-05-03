@@ -52,9 +52,9 @@ git clone [https://github.com/Divina-s/BloomsAI]
 
 2. **Backend:**
 - Navigate to the `backend` directory.
-- Start the Flask server:
+- Start the Django server:
   ```
-  python app.py
+  python manage.py runserver
   ```
   
 3. **UI/UX Design:**
