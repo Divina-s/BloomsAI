@@ -70,6 +70,6 @@ Contributions to the project are welcome! Here's how you can contribute:
 - [Divina Mbel](https://github.com/Divina-s)
 - [Mahagueheme G. Roxanne](https://github.com/mahagueheme-Lesly)
 - [Nyony Godwill](https://github.com/godsakani)
-- [Contributor 3](link-to-github-profile)
-- [Contributor 3](link-to-github-profile)
+- [Lukong Anne](https://github.com/Lukong123)
+- [Kamdem Syntyche](link-to-github-profile)
 
