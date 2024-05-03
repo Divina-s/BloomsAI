@@ -1,4 +1,3 @@
-
-class APIs{
-    static const chatApiKey = "";
+class APIs {
+  static const chatApiKey = "";
 }
