@@ -1,7 +1,7 @@
 import 'package:bloomsai/app/common/theme/app_colors.dart';
 import 'package:bloomsai/app/common/theme/assets_strings.dart';
 import 'package:bloomsai/app/common/theme/text_style.dart';
-import 'package:bloomsai/app/common/widget/custom_button.dart';
+import 'package:bloomsai/app/common/widget/others/custom_button.dart';
 import 'package:bloomsai/app/views/onboard/onboard_one.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
