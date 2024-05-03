@@ -59,10 +59,12 @@ git clone [https://github.com/Divina-s/BloomsAI]
   
 3. **UI/UX Design:**
 - Access the screens via the [Link](https://www.figma.com/file/wRI52JU1vPLU1zKR3P8FTR/Blooms-AI?type=design&node-id=28-2187&mode=design&t=PGpqqVCs7czDbuPe-0)
+
   
-5. **Accessing the App:**
+4. **Accessing the App:**
 - Access the mobile app on the device or emulator.
 - Follow the on-screen instructions to upload images for disease prediction and interact with the chatbot.
+
 
 ## How to Contribute
 Contributions to the project are welcome! Here's how you can contribute:
