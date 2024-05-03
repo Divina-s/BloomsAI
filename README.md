@@ -31,7 +31,7 @@ git clone [https://github.com/Divina-s/BloomsAI]
 - Navigate to the `backend` directory.
 - Open the `requirement.txt` file and start setting up your environment
 - **Downloading the Model:**
-  - Download the model file from [Google Drive](https://drive.google.com/file/d/1Fp_Yi7Qqp1mN_p1n4Fx6aqPjHJPRt3rs/view?usp=drive_link).
+  - Download the model file from [Google Drive](https://drive.google.com/drive/folders/1dlSuHmNXZvqUGZBqdlQtZrIK-uANZvI_?usp=sharing).
   - Place the downloaded model file in the appropriate directory (`backend/models`)
 
 4. **Database Setup:**
@@ -72,4 +72,3 @@ Contributions to the project are welcome! Here's how you can contribute:
 - [Nyony Godwill](https://github.com/godsakani)
 - [Lukong Anne](https://github.com/Lukong123)
 - [Kamdem Syntyche](link-to-github-profile)
-
