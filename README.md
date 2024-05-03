@@ -5,6 +5,7 @@ The objective of this project is to develop a mobile application that helps farm
 
 ## Technologies Used
 - **Mobile Development:** [Flutter](https://flutter.dev/) , [Dart](https://dart.dev/) - Language , - [Firebase](https://firebase.google.com/) - Database and Authenticaion.
+- **UI/UX Design:** [Figma](https://www.figma.com/)
 - **Deep Learning:** [TensorFlow](https://www.tensorflow.org/), [Keras](https://keras.io/)
 - **Image Processing:** [Pillow](https://pillow.readthedocs.io/en/stable/)
 - **Backend:** [Django](https://www.djangoproject.com/start/)
@@ -55,8 +56,11 @@ git clone [https://github.com/Divina-s/BloomsAI]
   ```
   python app.py
   ```
-
-3. **Accessing the App:**
+  
+3. **UI/UX Design:**
+- Access the screens via the [Link](https://www.figma.com/file/wRI52JU1vPLU1zKR3P8FTR/Blooms-AI?type=design&node-id=28-2187&mode=design&t=PGpqqVCs7czDbuPe-0)
+  
+5. **Accessing the App:**
 - Access the mobile app on the device or emulator.
 - Follow the on-screen instructions to upload images for disease prediction and interact with the chatbot.
 
@@ -72,4 +76,3 @@ Contributions to the project are welcome! Here's how you can contribute:
 - [Nyony Godwill](https://github.com/godsakani)
 - [Lukong Anne](https://github.com/Lukong123)
 - [Kamdem Syntyche](link-to-github-profile)
-
