@@ -12,7 +12,7 @@ The CNN model architecture used for crop disease detection consists of several c
 The architecture is as follows:
 Model: "sequential"
 _________________________________________________________________
- Layer (type)                Output Shape              Param #   
+ ###Layer (type)                Output Shape              Param    
 =================================================================
  conv2d (Conv2D)             (None, 222, 222, 32)      896       
                                                                  
