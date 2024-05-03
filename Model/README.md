@@ -51,4 +51,4 @@ To train the model, run the notebook: (notebook url)
 
 
 ## Trained model
-Trained model (https://drive.google.com/file/d/1Fp_Yi7Qqp1mN_p1n4Fx6aqPjHJPRt3rs/view?usp=drive_link)
+Trained model (https://drive.google.com/drive/folders/1dlSuHmNXZvqUGZBqdlQtZrIK-uANZvI_?usp=sharing)
