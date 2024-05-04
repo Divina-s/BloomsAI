@@ -4,7 +4,7 @@
 The objective of this project is to develop a mobile application that helps farmers diagnose crop diseases quickly and accurately. Users will be able to upload pictures of their crops, and the app will analyze the images to detect any diseases present. Additionally, the app will provide recommendations for treatment of the detected diseases. The app also features a chatbot to assist users with any crop-related queries they may have.
 
 ## Technologies Used
-- **Mobile Development:** [Flutter](https://flutter.dev/) , [Dart](https://dart.dev/) - Language , - [Firebase](https://firebase.google.com/) - Database and Authenticaion.
+- **Mobile Development:** [Flutter](https://flutter.dev/) , [Dart](https://dart.dev/) - Language ,
 - **UI/UX Design:** [Figma](https://www.figma.com/)
 - **Deep Learning:** [TensorFlow](https://www.tensorflow.org/), [Keras](https://keras.io/)
 - **Image Processing:** [Pillow](https://pillow.readthedocs.io/en/stable/)
@@ -59,7 +59,6 @@ git clone [https://github.com/Divina-s/BloomsAI]
   
 3. **UI/UX Design:**
 - Access the screens via the [Link](https://www.figma.com/file/wRI52JU1vPLU1zKR3P8FTR/Blooms-AI?type=design&node-id=28-2187&mode=design&t=PGpqqVCs7czDbuPe-0)
-
   
 4. **Accessing the App:**
 - Access the mobile app on the device or emulator.
