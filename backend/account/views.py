@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings
 from .models import Profile
-from .serializers import UserSignupSerializer, UserLoginSerializer
+from .serializers import UserSignupSerializer, UserLoginSerializer, ProfileSerializer
 from rest_framework.authtoken.models import Token
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -83,7 +83,7 @@ class UserLogout(APIView):
     authentication_classes = [JSONWebTokenAuthentication]
     permission_classes = [IsAuthenticated]
 
-    def post(self, request):
+    def post(self,request):
         # Simply return a success response
         # No action is required on the server-side for JWT logout
         return Response({'message': 'Successfully logged out'}, status=status.HTTP_200_OK)
@@ -98,45 +98,58 @@ from django.conf import settings
 import random
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import AnonymousUser
-
+import json
 @csrf_exempt
 
+
+
+
 def forgot_password(request):
-    print('Request Body:', request.POST)  # Debugging statement
+    print('Request Body:', request.body)  # Debugging statement
 
     if request.method == 'POST':
-        if isinstance(request.user, AnonymousUser):
-            return JsonResponse({'error': 'User is not authenticated.'}, status=401)
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body)
+            email = data.get('email')
+            print('email:', email)  # Debugging statement
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON format in request body.'}, status=400)
 
-        email = request.POST.get('email')
-        print('email:', email)  # Debugging statement
+        # Ensure that email is provided and not empty
+        if not email:
+            return JsonResponse({'error': 'Email is required.'}, status=400)
 
         try:
-            user = request.user
-            print("User:", user)  # Debugging statement
+            # Check if the user exists
+            user = User.objects.get(email=email)
         except User.DoesNotExist:
+            # If the user does not exist, return an error response
             return JsonResponse({'error': 'User with this email does not exist.'}, status=400)
-        
+
         # Generate a 5-digit random code
         code = ''.join(random.choices('0123456789', k=5))
-        
+
         # Send the code to the user's email
         subject = 'Password Reset Code'
         message = f'Your password reset code is: {code}'
         from_email = settings.EMAIL_HOST_USER
-        to_email = [user.email]
+        to_email = [email]
         try:
             send_mail(subject, message, from_email, to_email, fail_silently=False)
         except Exception as e:
             print("Error sending email:", e)  # Debugging statement
-            return JsonResponse({'error': 'Failed to send email.'}, status=500)
+            return JsonResponse({'error': 'Failed to send email. Error: {}'.format(str(e))}, status=500)
 
         # Store the code in the session for verification
         request.session['reset_code'] = code
         request.session['reset_email'] = email
 
         return JsonResponse({'message': 'Code sent successfully.'})
+
     return JsonResponse({'error': 'Invalid request method.'}, status=405)
+
+
 def verify_code(request):
     if request.method == 'POST':
         code = request.POST.get('code')
@@ -171,26 +184,21 @@ def change_password(request):
 
 
 
-@require_POST
-@login_required
-def complete_profile(request):
-    name = request.POST.get('name')
-    phone_number = request.POST.get('phone_number')
-    gender = request.POST.get('gender')
-    address = request.POST.get('address')
-    email = request.POST.get('email')
 
-    # Retrieve the user's profile
-    profile, created = Profile.objects.get_or_create(user=request.user)
+ 
+class CompleteProfileAPIView(APIView):
+    permission_classes = [IsAuthenticated]
 
-    # Update profile fields
-    profile.name = name
-    profile.phone_number = phone_number
-    profile.gender = gender
-    profile.address = address
-    profile.email = email
-
-    # Save the profile
-    profile.save()
-
-    return JsonResponse({'success': True, 'message': 'Profile completed successfully.'})
+    def post(self, request):
+        serializer = ProfileSerializer(data=request.data)
+        if serializer.is_valid():
+            # Update the user's profile
+            profile, created = Profile.objects.get_or_create(user=request.user)
+            profile.name = serializer.validated_data.get('name')
+            profile.phone_number = serializer.validated_data.get('phone_number')
+            profile.gender = serializer.validated_data.get('gender')
+            profile.address = serializer.validated_data.get('address')
+            profile.email = serializer.validated_data.get('email')
+            profile.save()
+            return Response({'success': True, 'message': 'Profile completed successfully.'})
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

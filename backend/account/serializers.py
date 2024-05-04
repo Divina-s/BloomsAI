@@ -42,3 +42,13 @@ from rest_framework import serializers
 
 class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
+
+
+from rest_framework import serializers
+
+class ProfileSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=100)
+    phone_number = serializers.CharField(max_length=20)
+    gender = serializers.CharField(max_length=10)
+    address = serializers.CharField(max_length=255)
+    email = serializers.EmailField()

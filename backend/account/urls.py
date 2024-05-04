@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import UserSignup, UserLogin, UserLogout, forgot_password
+from .views import UserSignup, UserLogin, UserLogout, forgot_password, CompleteProfileAPIView
 from . import views
 
 urlpatterns = [
@@ -10,7 +10,7 @@ urlpatterns = [
     path('api/forgot-password/', views.forgot_password, name='forgot_password'),
     path('api/verify-code/', views.verify_code, name='verify_code'),
     path('api/change-password/', views.change_password, name='change_password'),
-    path('api/complete-profile/', views.complete_profile, name='complete_profile'),
+    path('api/complete-profile/',CompleteProfileAPIView.as_view() , name='complete_profile'),
     path('forgot-password/', forgot_password, name='forgot_password'),
 ]
 

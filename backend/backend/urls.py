@@ -10,6 +10,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('bloomsai/',include('blooms_app.urls')),
     path('account/',include('account.urls')),
+    path('bloomsmodel/',include('disease_detection.urls')),
     path('admin/', admin.site.urls),
 
 ]

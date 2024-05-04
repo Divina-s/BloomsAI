@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+
+# settings.py
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Example: Token expires after 15 minutes
+}
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +51,7 @@ INSTALLED_APPS = [
     # installed apps
     "blooms_app",
     "account",
+    "disease_detection",
     
 ]
 
@@ -152,5 +161,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'bloomsai.damsg@gmail.com'
-EMAIL_HOST_PASSWORD = 'dam-sg2024'
+EMAIL_HOST_USER = 'godwillcloud@gmail.com'
+EMAIL_HOST_PASSWORD = 'iulauwkresspnmjq'
+
+
+
+# settings.py
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),  # Example: Token expires after 15 minutes
+}
