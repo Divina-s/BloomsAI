@@ -33,7 +33,7 @@ git clone [https://github.com/Divina-s/BloomsAI]
 - Open the `requirement.txt` file and start setting up your environment
 - **Downloading the Model:**
   - Download the model file from [Google Drive](https://drive.google.com/drive/folders/1dlSuHmNXZvqUGZBqdlQtZrIK-uANZvI_?usp=sharing).
-  - Place the downloaded model file in the appropriate directory (`backend/models`)
+  - Place the downloaded model file in the appropriate directory (`backend/disease_detection/models`)
 
 4. **Database Setup:**
 - The database used is an inbuild database *Django SQLite database* .
